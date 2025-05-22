@@ -1,0 +1,160 @@
+type: collection.insomnia.rest/5.0
+name: Ignite Node.js API REST
+meta:
+  id: wrk_321e4deaf9124211823beaec57090035
+  created: 1744777786642
+  modified: 1744777786642
+collection:
+  - name: Transactions
+    meta:
+      id: fld_d131c7635c0647e3834e3ebe7733b0c7
+      created: 1744777801547
+      modified: 1747918544896
+      sortKey: -1744777801547
+    children:
+      - url: "{{ _.url }}/transactions"
+        name: Create Transactions
+        meta:
+          id: req_c9eca3ff3c034161b2b8503ca332a52a
+          created: 1744777812160
+          modified: 1747919453907
+          isPrivate: false
+          sortKey: -1744777812160
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title": "lanche",
+            	"amount": 500,
+            	"type": "debit"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/transactions"
+        name: List Transactions
+        meta:
+          id: req_4961181fd13449a9bf5d301bae073545
+          created: 1744778732124
+          modified: 1747919439542
+          isPrivate: false
+          sortKey: -1744778732124
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/transactions/bc765305-9d5b-4817-81a6-ece1a9493acd"
+        name: Get Transaction
+        meta:
+          id: req_557acc155fed4fb49b59be51f71862b8
+          created: 1744779232304
+          modified: 1747919537685
+          isPrivate: false
+          sortKey: -1744778272142
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/transactions/summary"
+        name: Summary
+        meta:
+          id: req_b67680ff966c473590110c0ff98aef75
+          created: 1744779686356
+          modified: 1747919432963
+          isPrivate: false
+          sortKey: -1744778502133
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f64dbf3170c3414bfcbee36af9693b9af7e5d7da
+    created: 1744777786656
+    modified: 1747917966453
+  cookies:
+    - key: sessionId
+      value: f156000e-53ec-4965-b274-d521260ade23
+      maxAge: 604800
+      domain: localhost
+      path: /
+      hostOnly: true
+      creation: 2025-05-03T19:55:27.662Z
+      lastAccessed: 2025-05-03T19:55:27.662Z
+      sameSite: lax
+      id: a5a999aa-6f92-4219-b17c-99a6606954c9
+    - key: sessionId
+      value: 5528e47c-fdca-40b9-921f-b35a1e78d549
+      maxAge: 604800
+      domain: zero2-nodejs-api-y9s4.onrender.com
+      path: /
+      hostOnly: true
+      creation: 2025-05-22T12:46:06.452Z
+      lastAccessed: 2025-05-22T12:46:06.452Z
+      sameSite: lax
+      id: 19557528-04ba-4d24-9912-1d3701d78ab3
+environments:
+  name: Base Environment
+  meta:
+    id: env_f64dbf3170c3414bfcbee36af9693b9af7e5d7da
+    created: 1744777786648
+    modified: 1744777849108
+    isPrivate: false
+  data:
+    local: http://localhost:3333
+  subEnvironments:
+    - name: dev
+      meta:
+        id: env_60372941635c40a78aa0ac0b481eed82
+        created: 1747918169117
+        modified: 1747919412297
+        isPrivate: false
+        sortKey: 1747918169117
+      data:
+        url: '"http://localhost:3333"'
+    - name: prod
+      meta:
+        id: env_c1ca889540774dddac6251ba946bf312
+        created: 1747918183107
+        modified: 1747919404377
+        isPrivate: false
+        sortKey: 1747918183107
+      data:
+        url: https://zero2-nodejs-api-y9s4.onrender.com
+      color: "#28c875"
